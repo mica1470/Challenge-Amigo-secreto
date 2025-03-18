@@ -1,10 +1,10 @@
-Amigo Secreto
+**Amigo Secreto** 
 
 Este es un pequeño proyecto en JavaScript que permite a los usuarios agregar nombres a una lista y sortear de manera aleatoria un "amigo secreto".
 
 ---
 
-Características
+**Características**
 
 - Agregar nombres a una lista de amigos.
 - Mostrar la lista de amigos ingresados.
@@ -13,7 +13,7 @@ Características
 
 ---
 
-Tecnologías utilizadas
+**Tecnologías utilizadas**
 
 - HTML5
 - CSS3
@@ -21,10 +21,10 @@ Tecnologías utilizadas
 
 ---
 
-Instalación y uso
+**Instalación y uso**
 
 - Clona este repositorio o descarga los archivos.
-  git clone https://github.com/tu-usuario/amigo-secreto.git
+  git clone https://github.com/mica1470/Challenge-Amigo-secreto
 
 - Abre el archivo index.html en tu navegador.
 - Escribe los nombres de los participantes y agrégalos a la lista.
@@ -32,9 +32,9 @@ Instalación y uso
 
 ---
 
-Funcionalidades del código
+**Funcionalidades del código**
 
-- agregarAmigo()
+- _agregarAmigo_()
 
 Captura el nombre ingresado en el campo de texto.
 
@@ -42,11 +42,11 @@ Valida que el campo no esté vacío.
 
 Agrega el nombre a un array y limpia el campo de entrada.
 
-- actualizarAmigos()
+- _actualizarAmigos_()
 
 Recorre el array de amigos y actualiza la lista en el HTML.
 
-- sortearAmigo()
+- _sortearAmigo_()
 
 Valida que haya nombres en la lista.
 
@@ -54,4 +54,4 @@ Usa Math.random() para seleccionar un nombre aleatorio.
 
 Muestra el resultado en la interfaz.
 
-¡Disfruta jugando Amigo Secreto! 🎉
+_¡Disfruta jugando Amigo Secreto! 🎉_
