@@ -41,11 +41,12 @@ function actualizarListaAmigos()
 
 function sortearAmigo()
 {
+    // Verifica si hay al menos un amigo para sortear
     if (amigos.length === 0)  {
         alert("Por favor, inserte al menos un nombre antes de sortear.");
         return;
     }
-    // Genera un número aleatorio entre 0 y la longitud de los amigos menos 1
+    // Genera un número aleatorio entre 0 y la longitud de los amigos
     let randomIndex = Math.floor(Math.random() * amigos.length);
     let amigoSorteado = amigos[randomIndex];
 
