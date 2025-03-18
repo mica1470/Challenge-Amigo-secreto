@@ -1,9 +1,13 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Leckerli+One&display=swap');
+
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-primary:#ce7095;
+    --color-secondary: #ffdbd7;
+    --color-tertiary: #855e6e;
+    --color-button: #ce7095;
+    --color-button-hover: #855e6e;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -51,23 +55,46 @@ body {
     padding: 20px;
     width: 100%;
 }
+/* Imagen */
 
+.imagen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40.6rem;
+    padding: 0 3rem ;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;}
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
+    font-size: 68px;
+    font-family: "Leckerli One", cursive;
+    font-weight: 300;
+    font-style: regular;
     color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+}
+.main-title:hover {
+    transform: translateY(-5px);
+    /* Efecto de levantamiento del título */
+    color: #E6B2BA;
 }
 
 .section-title {
-    font-family: "Inter", serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 400;
+    font-style: lighter;
     color: var(--color-primary);
     margin: 10px 0;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.section-title:hover
+{
+    transform: translateY(-5px);
+    /* Efecto de levantamiento del título */
+    color: #E6B2BA;
 }
 
 /* Contenedores de entrada y botón */
@@ -85,6 +112,13 @@ body {
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-name:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--color-primary);
+    /* Sombra al seleccionar el input */
 }
 
 .button-container {
@@ -100,10 +134,15 @@ body {
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", sans-serif;    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 }
-
+.input-title:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--color-primary);
+    /* Sombra al seleccionar el input */
+}
 /* Estilos de botón */
 button {
     padding: 15px 30px;
@@ -116,13 +155,17 @@ button {
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-button);
     color: var(--color-text);
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    transform: scale(1.1);
+        /* Aumenta el tamaño del botón al pasar el mouse */
+        background-color: #E6B2BA;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* Aumenta el sombreado */
 }
 
 /* Listas */
@@ -130,16 +173,18 @@ ul {
     list-style-type: none;
     color: var(--color-text);
     font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 20px;
+    margin: 25px 0;
 }
 
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-button-hover);
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
+    text-decoration:wavy;
 }
 
 /* Botón de sortear título */
@@ -159,4 +204,6 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    transform: scale(1.05);
+   /* Aumenta el tamaño al pasar el mouse */
 }
