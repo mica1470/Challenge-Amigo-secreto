@@ -7,7 +7,6 @@ function agregarAmigo() {
     // Creo una variable input para tomar los datos y luego poder limpiar el campo
     let input = document.getElementById("amigo");
     let nombre = input.value.trim();
-    let listaAmigos = document.getElementById("listaAmigos");
 
     if (nombre === "") {
         alert("Por favor, inserte un nombre.");
@@ -15,17 +14,44 @@ function agregarAmigo() {
     } else if (amigos.includes(nombre)) {
         // Verifica si el nombre ya está agregado
         alert("Este amigo ya se encuentra en la lista.");
+        input.value = ""; 
         return;
     } 
     
     amigos.push(nombre);
 
-    // Crea un nuevo elemento de lista y agregarlo a la lista (ul)
-    let li = document.createElement("li");
-    li.textContent = nombre;
-    listaAmigos.appendChild(li);
-    
     // Limpia el campo de entrada
     input.value = ""; 
+     // Actualizar la lista en el HTML
+    actualizarListaAmigos();
 }
 
+function actualizarListaAmigos()
+{
+    let listaAmigos = document.getElementById("listaAmigos");
+
+    listaAmigos.innerHTML = ""; // Limpiar la lista antes de actualizar
+    
+    for (let i = 0; i < amigos.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = amigos[i];
+        listaAmigos.appendChild(li);
+    }
+}
+
+function sortearAmigo()
+{
+    if (amigos.length === 0)  {
+        alert("Por favor, inserte al menos un nombre antes de sortear.");
+        return;
+    }
+    // Genera un número aleatorio entre 0 y la longitud de los amigos menos 1
+    let randomIndex = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[randomIndex];
+
+    // Mostrar el resultado en el HTML
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>🎉 Amigo Sorteado: <strong>${amigoSorteado}</strong> 🎉</li>`;
+
+
+}
