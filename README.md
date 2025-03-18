@@ -24,7 +24,7 @@ Este es un pequeño proyecto en JavaScript que permite a los usuarios agregar no
 **Instalación y uso**
 
 - Clona este repositorio o descarga los archivos.
-  git clone https://github.com/mica1470/Challenge-Amigo-secreto
+  git clone https://github.com/mica1470/Challenge-Amigo-secreto.git
 
 - Abre el archivo index.html en tu navegador.
 - Escribe los nombres de los participantes y agrégalos a la lista.
